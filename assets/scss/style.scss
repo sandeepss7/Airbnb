@@ -8,9 +8,11 @@
 @import "./base/dev";
 
 // atoms
-
+@import './atoms/property-tile';
 // molecule
-
+@import './molecules/properties';
 // organisms
-@import 'organisms/header';
+@import './organisms/header';
+@import './organisms/inspiration';
+@import './organisms/footer';
 // pages

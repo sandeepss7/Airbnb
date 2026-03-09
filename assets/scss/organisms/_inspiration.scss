@@ -1,0 +1,79 @@
+.getaways {
+  padding: 60px 0;
+
+  .section-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 25px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+
+    .tab {
+      background: none;
+      border: none;
+      padding: 10px 0;
+      font-size: 14px;
+      cursor: pointer;
+      color: #666;
+      position: relative;
+
+      &.active {
+        color: #000;
+        font-weight: 500;
+      }
+
+      &.active::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #000;
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .destinations {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px 60px;
+  }
+
+  .dest {
+    cursor: pointer;
+
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    span {
+      font-size: 13px;
+      color: #717171;
+    }
+  }
+
+  .show-more {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .hidden-item {
+    display: none;
+  }
+}

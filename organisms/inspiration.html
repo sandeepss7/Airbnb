@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- styles -->
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- body content start -->
+    <section class="getaways">
+
+       <div class="content-wrapper">
+         <h2 class="section-title">Inspiration for future getaways</h2>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="popular">Popular</button>
+            <button class="tab" data-tab="arts">Arts & culture</button>
+            <button class="tab" data-tab="beach">Beach</button>
+            <button class="tab" data-tab="mountains">Mountains</button>
+            <button class="tab" data-tab="outdoors">Outdoors</button>
+            <button class="tab" data-tab="things">Things to do</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="popular">
+
+            <div class="destinations">
+
+                <div class="dest">
+                    <h4>Corpus Christi</h4>
+                    <span>Apartment rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Charlotte</h4>
+                    <span>Monthly Rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Cincinnati</h4>
+                    <span>House rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Philadelphia</h4>
+                    <span>Flat rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Orange Beach</h4>
+                    <span>Flat rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>San Juan</h4>
+                    <span>Holiday rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Florida Keys</h4>
+                    <span>Flat rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Chicago</h4>
+                    <span>Villa rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Pittsburgh</h4>
+                    <span>Monthly Rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Gulf Shores</h4>
+                    <span>House rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>North Myrtle Beach</h4>
+                    <span>Villa rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Nice</h4>
+                    <span>House rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Savannah</h4>
+                    <span>Monthly Rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Manhattan</h4>
+                    <span>Flat rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Kansas City</h4>
+                    <span>Apartment rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Detroit</h4>
+                    <span>Holiday rentals</span>
+                </div>
+
+                <div class="dest">
+                    <h4>Albuquerque</h4>
+                    <span>Holiday rentals</span>
+                </div>
+
+                <div class="dest show-more">
+                    Show more ▼
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Example second tab -->
+        <div class="tab-content" id="arts">
+            <p>Arts & culture destinations here</p>
+        </div>
+       </div>
+
+    </section>
+    <!-- body content end -->
+
+    <!-- scripts -->
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <!-- scripts -->
+    <script>
+        const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                const target = tab.dataset.tab;
+
+                tabs.forEach(t => t.classList.remove("active"));
+                contents.forEach(c => c.classList.remove("active"));
+
+                tab.classList.add("active");
+                document.getElementById(target).classList.add("active");
+
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -14,17 +14,448 @@
 
 <body>
     <!-- body content start -->
-    <div class="ab-header">
-        <div class="container">
+    <header class="ab-header">
+        <div class="content-wrapper">
+
+            <!-- Top Navigation -->
+            <div class="top-nav">
+
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg" alt="airbnb">
+                </div>
+
+                <div class="nav-center">
+                    <a class="nav-tab active" data-tab="homes">
+                        <img src="../assets/images/home-icon.png" alt="img">
+                        Homes
+                    </a>
+
+                    <a class="nav-tab" data-tab="experiences">
+                        <img src="../assets/images/home-icon.png" alt="img">
+                        Experiences
+                    </a>
+
+                    <a class="nav-tab" data-tab="services">
+                        <img src="../assets/images/home-icon.png" alt="img">
+                        Services
+                    </a>
+                </div>
+
+                <div class="nav-right">
+                    <a href="#" class="host-cta">Become a host</a>
+
+                    <div class="icon-btn">🌐</div>
+
+                    <div class="menu-wrapper">
+
+                        <div class="icon-btn menu-btn">☰</div>
+
+                        <!-- DROPDOWN -->
+                        <div class="menu-dropdown" id="menuDropdown">
+
+                            <a href="#">Help Centre</a>
+
+                            <div class="divider"></div>
+
+                            <a href="#">Become a host</a>
+                            <p class="sub">It’s easy to start hosting and earn extra income.</p>
+
+                            <div class="divider"></div>
+
+                            <a href="#">Refer a host</a>
+                            <a href="#">Find a co-host</a>
+
+                            <div class="divider"></div>
+
+                            <a href="#">Log in or sign up</a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Search Bar -->
+            <div class="search-wrapper">
+
+                <div class="search-bar">
+
+                    <!-- WHERE -->
+                    <div class="search-item location-field">
+
+                        <label>Where</label>
+                        <input type="text" placeholder="Search destinations" id="locationInput">
+
+                        <!-- DROPDOWN -->
+                        <div class="search-dropdown" id="locationDropdown">
+
+                            <p class="dropdown-title">Suggested destinations</p>
+
+                            <div class="dropdown-item">
+                                <span class="icon">📍</span>
+                                <div>
+                                    <strong>Nearby</strong>
+                                    <p>Find what's around you</p>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <span class="icon">🏙</span>
+                                <div>
+                                    <strong>New Delhi, Delhi</strong>
+                                    <p>For sights like India Gate</p>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <span class="icon">🏖</span>
+                                <div>
+                                    <strong>North Goa, Goa</strong>
+                                    <p>Popular beach destination</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="search-item">
+                        <div class="date-field">
+
+                            <label>When</label>
+                            <input type="text" placeholder="Add dates" id="dateInput" readonly>
+
+                            <!-- CALENDAR -->
+                            <div class="calendar-dropdown" id="calendarDropdown">
+
+                                <div class="calendar-tabs">
+                                    <button class="active">Dates</button>
+                                    <button>Months</button>
+                                    <button>Flexible</button>
+                                </div>
+
+                                <div class="calendar-container">
+
+                                    <!-- MONTH 1 -->
+                                    <div class="calendar-month">
+                                        <h4 id="month1"></h4>
+                                        <div class="calendar-grid" id="calendar1"></div>
+                                    </div>
+
+                                    <!-- MONTH 2 -->
+                                    <div class="calendar-month">
+                                        <h4 id="month2"></h4>
+                                        <div class="calendar-grid" id="calendar2"></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="calendar-footer">
+                                    <button>Exact dates</button>
+                                    <button>± 1 day</button>
+                                    <button>± 2 days</button>
+                                    <button>± 3 days</button>
+                                    <button>± 7 days</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="search-item">
+                        <div class="guest-field">
+
+                            <label>Who</label>
+                            <input type="text" placeholder="Add guests" id="guestInput" readonly>
+
+                            <!-- GUEST DROPDOWN -->
+                            <div class="guest-dropdown" id="guestDropdown">
+
+                                <div class="guest-row">
+                                    <div>
+                                        <strong>Adults</strong>
+                                        <p>Ages 13 or above</p>
+                                    </div>
+
+                                    <div class="counter">
+                                        <button class="minus" data-type="adults">−</button>
+                                        <span id="adultsCount">0</span>
+                                        <button class="plus" data-type="adults">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="guest-row">
+                                    <div>
+                                        <strong>Children</strong>
+                                        <p>Ages 2–12</p>
+                                    </div>
+
+                                    <div class="counter">
+                                        <button class="minus" data-type="children">−</button>
+                                        <span id="childrenCount">0</span>
+                                        <button class="plus" data-type="children">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="guest-row">
+                                    <div>
+                                        <strong>Infants</strong>
+                                        <p>Under 2</p>
+                                    </div>
+
+                                    <div class="counter">
+                                        <button class="minus" data-type="infants">−</button>
+                                        <span id="infantsCount">0</span>
+                                        <button class="plus" data-type="infants">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="guest-row">
+                                    <div>
+                                        <strong>Pets</strong>
+                                        <p>Bringing a service animal?</p>
+                                    </div>
+
+                                    <div class="counter">
+                                        <button class="minus" data-type="pets">−</button>
+                                        <span id="petsCount">0</span>
+                                        <button class="plus" data-type="pets">+</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="search-btn" id="searchBtn">🔍
+
+                        <span class="search-text">Search</span>
+                    </button>
+
+                </div>
+
+            </div>
 
         </div>
-    </div>
+    </header>
+
     <!-- body content end -->
 
     <!-- scripts -->
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/script.js"></script>
     <!-- scripts -->
+
+    <script>
+        const searchInputs = document.querySelectorAll(".search-item input");
+
+        searchInputs.forEach(input => {
+            input.addEventListener("focus", () => {
+                input.parentElement.style.background = "#f7f7f7";
+                input.parentElement.style.borderRadius = "20px";
+            });
+
+            input.addEventListener("blur", () => {
+                input.parentElement.style.background = "transparent";
+            });
+        });
+
+
+        /* tab */
+        const tabs = document.querySelectorAll(".nav-tab");
+        const tabPanes = document.querySelectorAll(".tab-pane");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                const target = tab.dataset.tab;
+
+                // remove active
+                tabs.forEach(t => t.classList.remove("active"));
+                tabPanes.forEach(p => p.classList.remove("active"));
+
+                // add active
+                tab.classList.add("active");
+                document.getElementById(target).classList.add("active");
+
+            });
+
+        });
+        /* --- */
+
+        /* search */
+        const locationInput = document.getElementById("locationInput");
+        const dropdown = document.getElementById("locationDropdown");
+
+        locationInput.addEventListener("focus", () => {
+            dropdown.classList.add("active");
+        });
+
+        document.addEventListener("click", (e) => {
+
+            if (!e.target.closest(".location-field")) {
+                dropdown.classList.remove("active");
+            }
+
+        });
+        /* --- */
+
+        /* Calendar */
+        const dateInput = document.getElementById("dateInput");
+        const calendar = document.getElementById("calendarDropdown");
+
+        dateInput.addEventListener("click", () => {
+            calendar.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".date-field")) {
+                calendar.classList.remove("active");
+            }
+        });
+
+        function generateCalendar(monthOffset, containerId, titleId) {
+
+            const today = new Date();
+            const date = new Date(today.getFullYear(), today.getMonth() + monthOffset, 1);
+
+            const month = date.toLocaleString("default", { month: "long" });
+            const year = date.getFullYear();
+
+            document.getElementById(titleId).innerText = `${month} ${year}`;
+
+            const firstDay = new Date(year, date.getMonth(), 1).getDay();
+            const lastDate = new Date(year, date.getMonth() + 1, 0).getDate();
+
+            const grid = document.getElementById(containerId);
+            grid.innerHTML = "";
+
+            for (let i = 0; i < firstDay; i++) {
+                grid.innerHTML += "<div></div>";
+            }
+
+            for (let i = 1; i <= lastDate; i++) {
+                const day = document.createElement("div");
+                day.innerText = i;
+
+                day.addEventListener("click", () => {
+                    document.querySelectorAll(".calendar-grid div").forEach(d => d.classList.remove("selected"));
+                    day.classList.add("selected");
+                    dateInput.value = `${month} ${i}, ${year}`;
+                    calendar.classList.remove("active");
+                });
+
+                grid.appendChild(day);
+            }
+        }
+
+        generateCalendar(0, "calendar1", "month1");
+        generateCalendar(1, "calendar2", "month2");
+        /* -- */
+
+        /* guest list*/
+        const guestInput = document.getElementById("guestInput");
+        const guestDropdown = document.getElementById("guestDropdown");
+
+        guestInput.addEventListener("click", () => {
+            guestDropdown.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".guest-field")) {
+                guestDropdown.classList.remove("active");
+            }
+        });
+
+        const counts = {
+            adults: 0,
+            children: 0,
+            infants: 0,
+            pets: 0
+        };
+
+        function updateGuestInput() {
+            const totalGuests = counts.adults + counts.children;
+
+            let text = "";
+
+            if (totalGuests > 0) text += `${totalGuests} guests`;
+            if (counts.infants > 0) text += `, ${counts.infants} infants`;
+            if (counts.pets > 0) text += `, ${counts.pets} pets`;
+
+            guestInput.value = text || "Add guests";
+        }
+
+        document.querySelectorAll(".plus").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const type = btn.dataset.type;
+                counts[type]++;
+                document.getElementById(type + "Count").innerText = counts[type];
+                updateGuestInput();
+            });
+        });
+
+        document.querySelectorAll(".minus").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const type = btn.dataset.type;
+
+                if (counts[type] > 0) {
+                    counts[type]--;
+                    document.getElementById(type + "Count").innerText = counts[type];
+                    updateGuestInput();
+                }
+            });
+        });
+        /*  */
+
+        /* SEARCH */
+        const searchFields = document.querySelectorAll(".search-item input");
+        const searchBtn = document.getElementById("searchBtn");
+
+        searchFields.forEach(field => {
+
+            field.addEventListener("focus", () => {
+                searchBtn.classList.add("active");
+            });
+
+        });
+
+        /* Reset when clicking outside */
+
+        document.addEventListener("click", (e) => {
+
+            if (!e.target.closest(".search-bar")) {
+                searchBtn.classList.remove("active");
+            }
+
+        });
+        /*  */
+
+        /* help */
+        const menuBtn = document.querySelector(".menu-btn");
+        const menuDropdown = document.getElementById("menuDropdown");
+
+        menuBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            menuDropdown.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".menu-wrapper")) {
+                menuDropdown.classList.remove("active");
+            }
+        });
+        /* ---- */
+    </script>
 </body>
 
 </html>

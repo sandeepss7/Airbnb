@@ -1,0 +1,66 @@
+.ab-properties {
+  .section-heading {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .arrow-icon {
+    background-color: #ebebeb;
+    border-radius: 50%;
+    padding: 6px 8px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  .property-slider {
+    position: relative;
+    margin: 20px 0;
+  }
+
+  .tiles-out {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .tiles-out::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ab-propertytile {
+    flex: 0 0 210px;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: -30px;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    background: #ebebeb;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .slider-btn.prev {
+    right: 40px;
+  }
+
+  .slider-btn.next {
+    right: -10px;
+  }
+  .slider-btn.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
