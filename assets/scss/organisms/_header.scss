@@ -138,16 +138,17 @@
       }
 
       .icon-btn {
-        width: 40px;
-        height: 40px;
         border-radius: 50%;
+        background-color: #dddddd;
+        padding: 6px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: transparent;
         cursor: pointer;
         font-size: 16px;
         transition: background 0.15s;
+        width: 36px;
+        height: 36px;
 
         &:hover {
           background: #f7f7f7;
@@ -159,11 +160,9 @@
       position: relative;
 
       .menu-btn {
-        width: 76px;
-        height: 40px;
-        border-radius: 22px;
-        border: 1px solid #ddd;
-        background: #fff;
+        border-radius: 50%;
+        padding: 8px;
+        background: #dddddd;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -171,7 +170,8 @@
         cursor: pointer;
         font-size: 14px;
         transition: box-shadow 0.15s;
-
+        width: 36px;
+        height: 36px;
         &:hover {
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
         }
@@ -273,6 +273,15 @@
         &.guest-field {
           min-width: 160px;
           padding-right: 24px; // back to normal, no need to reserve space
+        }
+        &:hover {
+          background: #f7f7f7;
+        }
+        &:focus-visible {
+          background: #ffffff;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+          outline: none;
+          border: none;
         }
       }
 
@@ -442,6 +451,14 @@
     flex-direction: column;
   }
 
+  .date-field input {
+    background: transparent;
+  }
+
+  .date-field input:focus {
+    outline: none;
+    background: transparent;
+  }
   .calendar-dropdown {
     position: absolute;
     top: calc(100% + 30px);
