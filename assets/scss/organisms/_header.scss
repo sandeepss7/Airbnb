@@ -5,6 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
 
   .top-nav {
     display: flex;
@@ -431,6 +432,65 @@
       }
     }
   }
+
+  /* COMPACT SEARCH */
+
+  .search-compact {
+    display: none;
+    justify-content: center;
+  }
+
+  .compact-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 8px 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background: white;
+    font-size: 14px;
+  }
+
+  .compact-search {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: #ff385c;
+    color: white;
+    cursor: pointer;
+  }
+
+  .dot {
+    width: 4px;
+    height: 4px;
+    background: #aaa;
+    border-radius: 50%;
+  }
+
+  /* SCROLLED HEADER */
+
+&.scrolled {
+  padding: 10px 0;
+
+  .top-nav .nav-center {
+    display: none;
+  }
+
+  .search-wrapper {
+    display: none;
+  }
+
+  .top-nav .search-compact {
+    display: flex;
+  }
+}
+.search-wrapper,
+.nav-center,
+.search-compact {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
 }
 
 @include tablet-pro {

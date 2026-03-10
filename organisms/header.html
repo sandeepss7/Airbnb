@@ -24,6 +24,18 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg" alt="airbnb">
                 </div>
 
+                <div class="search-compact" id="searchCompact">
+                    <div class="compact-inner">
+                        <span>Anywhere</span>
+                        <span class="dot"></span>
+                        <span>Any week</span>
+                        <span class="dot"></span>
+                        <span>Add guests</span>
+
+                        <button class="compact-search">🔍</button>
+                    </div>
+                </div>
+
                 <div class="nav-center">
                     <a class="nav-tab active" data-tab="homes">
                         <img src="../assets/images/home-icon.png" alt="img">
@@ -455,6 +467,20 @@
             }
         });
         /* ---- */
+
+        /* scroll header */
+        const header = document.querySelector(".ab-header");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 80) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+
+        });
+        /*  */
     </script>
 </body>
 
