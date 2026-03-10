@@ -9,14 +9,560 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- styles -->
     <title>Document</title>
+
+    <style>
+      /* ── SEARCH WRAPPER ── */
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        background: white;
+        border: 1px solid #dddddd;
+        border-radius: 40px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05);
+        transition: box-shadow 0.2s ease;
+        position: relative;
+        height: 66px;
+
+        &:hover {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        // When any field is active, dim the whole bar slightly
+        &.has-active {
+            background: #ebebeb;
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }
+}
+
+/* ── SEARCH ITEMS ── */
+.search-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 100%;
+    flex-shrink: 0;
+    transition: background 0.15s ease;
+
+    &:hover {
+        background: #ebebeb;
+    }
+
+    &.active {
+        background: #fff !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+
+        // hide adjacent dividers when active
+        & + .search-divider,
+        .search-divider + & {
+            opacity: 0;
+        }
+    }
+
+    label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #222;
+        line-height: 16px;
+        pointer-events: none;
+        white-space: nowrap;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: #222;
+        background: none;
+        padding: 0;
+        width: 100%;
+        cursor: pointer;
+
+        &::placeholder {
+            color: #717171;
+        }
+    }
+
+    // Field widths to match Airbnb proportions
+    &#whereField   { min-width: 240px; }
+    &#checkinField { min-width: 130px; }
+    &#checkoutField{ min-width: 130px; }
+    &#whoField     { min-width: 180px; padding-right: 68px; } // space for button
+}
+
+/* ── DIVIDERS ── */
+.search-divider {
+    width: 1px;
+    height: 24px;
+    background: #dddddd;
+    flex-shrink: 0;
+    transition: opacity 0.15s ease;
+}
+
+/* ── SEARCH BUTTON ── */
+.search-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 24px;
+    background: #ff385c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.15s ease;
+
+    &:hover {
+        background: #e31c5f;
+    }
+
+    .search-text {
+        display: none;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    &.active {
+        min-width: 110px;
+        padding: 0 20px;
+
+        .search-text {
+            display: inline;
+        }
+    }
+}
+
+/* ── LOCATION DROPDOWN ── */
+.search-dropdown {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 0;
+    width: 400px;
+    background: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    display: none;
+    z-index: 999;
+
+    &.active { display: block; }
+
+    .dropdown-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 12px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background 0.15s;
+
+        &:hover { background: #f7f7f7; }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        strong { font-size: 14px; font-weight: 500; }
+        p { font-size: 13px; color: #717171; margin: 2px 0 0; }
+    }
+}
+
+/* ── CALENDAR DROPDOWN ── */
+.calendar-dropdown {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 680px;
+    background: #fff;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    display: none;
+    z-index: 1000;
+
+    &.active { display: block; }
+
+    .calendar-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 24px;
+
+        button {
+            border: 1px solid #dddddd;
+            padding: 10px 18px;
+            border-radius: 24px;
+            background: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+
+            &:hover { background: #f7f7f7; }
+
+            &.active {
+                border-color: #222;
+                background: #fff;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .calendar-container {
+        display: flex;
+        gap: 32px;
+    }
+
+    .calendar-month {
+        flex: 1;
+
+        h4 {
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+    }
+
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 4px;
+        text-align: center;
+
+        div {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.1s;
+
+            &:hover:not(:empty) { background: #f0f0f0; }
+
+            &.selected {
+                background: #222;
+                color: #fff;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .calendar-footer {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #ebebeb;
+        flex-wrap: wrap;
+
+        button {
+            border: 1px solid #dddddd;
+            padding: 8px 16px;
+            border-radius: 24px;
+            background: #fff;
+            font-size: 13px;
+            cursor: pointer;
+            transition: border-color 0.15s;
+
+            &:hover { border-color: #222; }
+        }
+    }
+}
+
+/* ── GUEST DROPDOWN ── */
+.guest-dropdown {
+    position: absolute;
+    top: calc(100% + 16px);
+    right: 0;
+    width: 360px;
+    background: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    display: none;
+    z-index: 1000;
+
+    &.active { display: block; }
+
+    .guest-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid #ebebeb;
+
+        &:last-child { border-bottom: none; }
+
+        strong { font-size: 15px; font-weight: 500; }
+        p { font-size: 13px; color: #717171; margin: 3px 0 0; }
+    }
+
+    .counter {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        button {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid #b0b0b0;
+            background: transparent;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+            color: #717171;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.15s, color 0.15s;
+
+            &:hover { border-color: #222; color: #222; }
+            &:disabled { opacity: 0.35; cursor: default; }
+        }
+
+        span { width: 24px; text-align: center; font-size: 15px; }
+    }
+}
+    </style>
   </head>
   <body>
     <!-- body content start -->
+     <!-- Search Bar -->
+<div class="search-wrapper">
+    <div class="search-bar" id="searchBar">
+
+        <!-- WHERE -->
+        <div class="search-item location-field" id="whereField">
+            <label>Where</label>
+            <input type="text" placeholder="Search destinations" id="locationInput" class="location-input" autocomplete="off">
+
+            <!-- DROPDOWN -->
+            <div class="search-dropdown" id="locationDropdown">
+                <p class="dropdown-title">Suggested destinations</p>
+                <div class="dropdown-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <strong>Nearby</strong>
+                        <p>Find what's around you</p>
+                    </div>
+                </div>
+                <div class="dropdown-item">
+                    <span class="icon">🏙</span>
+                    <div>
+                        <strong>New Delhi, Delhi</strong>
+                        <p>For sights like India Gate</p>
+                    </div>
+                </div>
+                <div class="dropdown-item">
+                    <span class="icon">🏖</span>
+                    <div>
+                        <strong>North Goa, Goa</strong>
+                        <p>Popular beach destination</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="search-divider" id="div1"></div>
+
+        <!-- CHECK IN -->
+        <div class="search-item date-field" id="checkinField">
+            <label>Check in</label>
+            <input type="text" placeholder="Add dates" id="checkinInput" readonly>
+            <div class="calendar-dropdown" id="calendarDropdown">
+                <div class="calendar-tabs">
+                    <button class="active">Dates</button>
+                    <button>Months</button>
+                    <button>Flexible</button>
+                </div>
+                <div class="calendar-container">
+                    <div class="calendar-month">
+                        <h4 id="month1"></h4>
+                        <div class="calendar-grid" id="calendar1"></div>
+                    </div>
+                    <div class="calendar-month">
+                        <h4 id="month2"></h4>
+                        <div class="calendar-grid" id="calendar2"></div>
+                    </div>
+                </div>
+                <div class="calendar-footer">
+                    <button>Exact dates</button>
+                    <button>± 1 day</button>
+                    <button>± 2 days</button>
+                    <button>± 3 days</button>
+                    <button>± 7 days</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="search-divider" id="div2"></div>
+
+        <!-- CHECK OUT -->
+        <div class="search-item date-field" id="checkoutField">
+            <label>Check out</label>
+            <input type="text" placeholder="Add dates" id="checkoutInput" readonly>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="search-divider" id="div3"></div>
+
+        <!-- WHO -->
+        <div class="search-item guest-field" id="whoField">
+            <label>Who</label>
+            <input type="text" placeholder="Add guests" id="guestInput" readonly>
+
+            <!-- GUEST DROPDOWN -->
+            <div class="guest-dropdown" id="guestDropdown">
+                <div class="guest-row">
+                    <div>
+                        <strong>Adults</strong>
+                        <p>Ages 13 or above</p>
+                    </div>
+                    <div class="counter">
+                        <button class="minus" data-type="adults">−</button>
+                        <span id="adultsCount">0</span>
+                        <button class="plus" data-type="adults">+</button>
+                    </div>
+                </div>
+                <div class="guest-row">
+                    <div>
+                        <strong>Children</strong>
+                        <p>Ages 2–12</p>
+                    </div>
+                    <div class="counter">
+                        <button class="minus" data-type="children">−</button>
+                        <span id="childrenCount">0</span>
+                        <button class="plus" data-type="children">+</button>
+                    </div>
+                </div>
+                <div class="guest-row">
+                    <div>
+                        <strong>Infants</strong>
+                        <p>Under 2</p>
+                    </div>
+                    <div class="counter">
+                        <button class="minus" data-type="infants">−</button>
+                        <span id="infantsCount">0</span>
+                        <button class="plus" data-type="infants">+</button>
+                    </div>
+                </div>
+                <div class="guest-row">
+                    <div>
+                        <strong>Pets</strong>
+                        <p>Bringing a service animal?</p>
+                    </div>
+                    <div class="counter">
+                        <button class="minus" data-type="pets">−</button>
+                        <span id="petsCount">0</span>
+                        <button class="plus" data-type="pets">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEARCH BUTTON (lives inside the last field) -->
+            <button class="search-btn" id="searchBtn">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="fill:currentColor;height:16px;width:16px;display:block;"><path d="M13 0C5.82 0 0 5.82 0 13s5.82 13 13 13c3.09 0 5.93-1.08 8.17-2.88l6.36 6.36a2 2 0 1 0 2.83-2.83L24 21.17A12.95 12.95 0 0 0 26 13C26 5.82 20.18 0 13 0zm0 4a9 9 0 1 1 0 18A9 9 0 0 1 13 4z"/></svg>
+                <span class="search-text">Search</span>
+            </button>
+        </div>
+
+    </div>
+</div>
     <!-- body content end -->
 
     <!-- scripts -->
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/script.js"></script>
+
+    <script>
+      /* ---------------- SEARCH BAR ACTIVE STATES ---------------- */
+
+const searchBar = document.getElementById("searchBar");
+const allSearchItems = document.querySelectorAll(".search-item");
+const allDividers = document.querySelectorAll(".search-divider");
+
+allSearchItems.forEach((item, i) => {
+    item.addEventListener("mouseenter", () => {
+        // hide divider before and after hovered item
+        if (allDividers[i - 1]) allDividers[i - 1].style.opacity = "0";
+        if (allDividers[i])     allDividers[i].style.opacity = "0";
+    });
+    item.addEventListener("mouseleave", () => {
+        allDividers.forEach(d => {
+            // only restore if neither neighbour is active
+            d.style.opacity = "";
+        });
+    });
+});
+
+// Mark bar as active when any field is focused
+document.querySelectorAll(".search-item input").forEach(input => {
+    input.addEventListener("focus", () => {
+        searchBar.classList.add("has-active");
+        input.closest(".search-item").classList.add("active");
+        searchBtn.classList.add("active");
+    });
+    input.addEventListener("blur", () => {
+        input.closest(".search-item").classList.remove("active");
+        if (!document.querySelector(".search-item.active")) {
+            searchBar.classList.remove("has-active");
+        }
+    });
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-bar")) {
+        searchBar.classList.remove("has-active");
+        allSearchItems.forEach(i => i.classList.remove("active"));
+        searchBtn.classList.remove("active");
+    }
+});
+    </script>
     <!-- scripts -->
   </body>
 </html>

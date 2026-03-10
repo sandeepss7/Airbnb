@@ -8,18 +8,13 @@
     <!-- styles -->
     <link rel="stylesheet" href="../assets/css/aos.css">
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- styles -->
     <title>Document</title>
 
-    <style>
-        .tab-pane {
-            display: none;
-        }
 
-        .tab-pane.active {
-            display: block;
-        }
-    </style>
 </head>
 
 <body>
@@ -50,17 +45,22 @@
 
                     <div class="nav-center">
                         <a class="nav-tab active" data-tab="homes">
-                            <img src="../assets/images/home-icon.png" alt="img">
+                            <img src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/4aae4ed7-5939-4e76-b100-e69440ebeae4.png?im_w=240"
+                                alt="Homes" class="nav-icon">
                             Homes
                         </a>
 
                         <a class="nav-tab" data-tab="experiences">
-                            <img src="../assets/images/home-icon.png" alt="img">
+                            <span class="nav-badge">NEW</span>
+                            <img src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/e47ab655-027b-4679-b2e6-df1c99a5c33d.png?im_w=240"
+                                alt="Experiences" class="nav-icon">
                             Experiences
                         </a>
 
                         <a class="nav-tab" data-tab="services">
-                            <img src="../assets/images/home-icon.png" alt="img">
+                            <span class="nav-badge">NEW</span>
+                            <img src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/3d67e9a9-520a-49ee-b439-7b3a75ea814d.png?im_w=240"
+                                alt="Services" class="nav-icon">
                             Services
                         </a>
                     </div>
@@ -259,8 +259,12 @@
                             </div>
                         </div>
 
-                        <button class="search-btn" id="searchBtn">🔍
-
+                        <button class="search-btn" id="searchBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="white"
+                                focusable="false">
+                                <path
+                                    d="M13 0C5.82 0 0 5.82 0 13s5.82 13 13 13c3.09 0 5.93-1.08 8.17-2.88l6.36 6.36a2 2 0 1 0 2.83-2.83L24 21.17A12.95 12.95 0 0 0 26 13C26 5.82 20.18 0 13 0zm0 4a9 9 0 1 1 0 18A9 9 0 0 1 13 4z" />
+                            </svg>
                             <span class="search-text">Search</span>
                         </button>
 
@@ -530,278 +534,22 @@
                         </div>
                         <button class="slider-btn next">›</button>
                     </div>
+                </div>
+            </div>
 
-                    <div class="property-slider">
-                        <button class="slider-btn prev">‹</button>
-                        <div class="tiles-out">
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile see-all-tile">
-                                <div class="see-all-box">
-                                    <div class="stack-images">
-                                        <img src="../assets/images/property1.avif">
-                                        <img src="../assets/images/property1.avif">
-                                        <img src="../assets/images/property1.avif">
-                                    </div>
-                                    <p>See all</p>
-                                </div>
-
-                            </div>
-                            <!--  -->
+            <div class="ab-properties">
+                <div class="content-wrapper">
+                    <h3 class="section-heading">Popular homes in Bengaluru
+                        <div class="arrow-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                                role="presentation" focusable="false"
+                                style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 4; overflow: visible;">
+                                <g fill="none">
+                                    <path d="M28 16H2M17 4l11.3 11.3a1 1 0 0 1 0 1.4L17 28"></path>
+                                </g>
+                            </svg>
                         </div>
-                        <button class="slider-btn next">›</button>
-                    </div>
+                    </h3>
 
                     <div class="property-slider">
                         <button class="slider-btn prev">‹</button>
@@ -862,34 +610,7 @@
                                 </p>
                             </div>
                             <!--  -->
-                            <!-- tile1 -->
-                            <div class="ab-propertytile">
-                                <div class="property-img">
-                                    <img src="../assets/images/property1.avif" alt="img">
-                                    <div class="whislist-icon">
-                                        <svg class="whislist-icon" viewBox="0 0 32 32"
-                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-                                            focusable="false"
-                                            style="display: block; fill: rgba(0, 0, 0, 0.5); height: 24px; width: 24px; stroke: var(--palette-icon-primary-inverse); stroke-width: 2; overflow: visible;">
-                                            <path
-                                                d="m15.9998 28.6668c7.1667-4.8847 14.3334-10.8844 14.3334-18.1088 0-1.84951-.6993-3.69794-2.0988-5.10877-1.3996-1.4098-3.2332-2.11573-5.0679-2.11573-1.8336 0-3.6683.70593-5.0668 2.11573l-2.0999 2.11677-2.0988-2.11677c-1.3995-1.4098-3.2332-2.11573-5.06783-2.11573-1.83364 0-3.66831.70593-5.06683 2.11573-1.39955 1.41083-2.09984 3.25926-2.09984 5.10877 0 7.2244 7.16667 13.2241 14.3333 18.1088z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <span class="guest-fav">Guest Favourite</span>
-                                </div>
-                                <p class="property-name">Flat in Jaya Nagar</p>
-                                <p class="property-rating">
-                                    ₹13,238 for 2 nights
-                                    <svg viewBox="0 0 32 32" class="rating-star">
-                                        <path
-                                            d="M15.093 2.364l3.09 6.26 6.91 1.004-5 4.873 1.18 6.877-6.18-3.25-6.18 3.25 1.18-6.877-5-4.873 6.91-1.004z">
-                                        </path>
-                                    </svg>
-                                    4.92
-                                </p>
-                            </div>
-                            <!--  -->
+
                             <!-- tile1 -->
                             <div class="ab-propertytile">
                                 <div class="property-img">
@@ -1366,6 +1087,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="tab-pane" id="services">
@@ -1838,9 +1560,11 @@
                         <span class="currency">₹ INR</span>
 
                         <div class="social">
-                            <a href="#">f</a>
-                            <a href="#">𝕏</a>
-                            <a href="#">📷</a>
+                            <a href="#"><i class="fa-brands fa-facebook" style="color: rgb(11, 11, 11);"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter" style="color: rgb(11, 11, 11);"></i></a>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram" style="color: rgb(11, 11, 11);"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -1857,309 +1581,7 @@
     <script src="../assets/js/script.js"></script>
     <!-- scripts -->
 
-    <script>
-        const searchInputs = document.querySelectorAll(".search-item input");
 
-        searchInputs.forEach(input => {
-            input.addEventListener("focus", () => {
-                input.parentElement.style.background = "#f7f7f7";
-                input.parentElement.style.borderRadius = "20px";
-            });
-
-            input.addEventListener("blur", () => {
-                input.parentElement.style.background = "transparent";
-            });
-        });
-
-
-        /* tab */
-        const tabs = document.querySelectorAll(".nav-tab");
-        const tabPanes = document.querySelectorAll(".tab-pane");
-
-        tabs.forEach(tab => {
-
-            tab.addEventListener("click", () => {
-
-                const target = tab.dataset.tab;
-
-                tabs.forEach(t => t.classList.remove("active"));
-                tabPanes.forEach(p => p.classList.remove("active"));
-
-                tab.classList.add("active");
-                const activePane = document.getElementById(target);
-                activePane.classList.add("active");
-
-                /* FIX: update slider arrows when tab becomes visible */
-                const slider = activePane.querySelector(".tiles-out");
-                const prevBtn = activePane.querySelector(".prev");
-                const nextBtn = activePane.querySelector(".next");
-
-                if (slider) {
-                    if (slider.scrollLeft <= 0) {
-                        prevBtn.classList.add("disabled");
-                    } else {
-                        prevBtn.classList.remove("disabled");
-                    }
-
-                    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5) {
-                        nextBtn.classList.add("disabled");
-                    } else {
-                        nextBtn.classList.remove("disabled");
-                    }
-                }
-
-            });
-
-        });
-        /* --- */
-
-        /* search */
-        const locationInputs = document.querySelectorAll(".location-input");
-        const dropdown = document.getElementById("locationDropdown");
-
-        locationInputs.forEach(input => {
-            input.addEventListener("focus", () => {
-                dropdown.classList.add("active");
-            });
-        });
-        document.addEventListener("click", (e) => {
-
-            if (!e.target.closest(".location-field")) {
-                dropdown.classList.remove("active");
-            }
-
-        });
-        /* --- */
-
-        /* Calendar */
-        const dateInput = document.getElementById("dateInput");
-        const calendar = document.getElementById("calendarDropdown");
-
-        dateInput.addEventListener("click", () => {
-            calendar.classList.toggle("active");
-        });
-
-        document.addEventListener("click", (e) => {
-            if (!e.target.closest(".date-field")) {
-                calendar.classList.remove("active");
-            }
-        });
-
-        function generateCalendar(monthOffset, containerId, titleId) {
-
-            const today = new Date();
-            const date = new Date(today.getFullYear(), today.getMonth() + monthOffset, 1);
-
-            const month = date.toLocaleString("default", { month: "long" });
-            const year = date.getFullYear();
-
-            document.getElementById(titleId).innerText = `${month} ${year}`;
-
-            const firstDay = new Date(year, date.getMonth(), 1).getDay();
-            const lastDate = new Date(year, date.getMonth() + 1, 0).getDate();
-
-            const grid = document.getElementById(containerId);
-            grid.innerHTML = "";
-
-            for (let i = 0; i < firstDay; i++) {
-                grid.innerHTML += "<div></div>";
-            }
-
-            for (let i = 1; i <= lastDate; i++) {
-                const day = document.createElement("div");
-                day.innerText = i;
-
-                day.addEventListener("click", () => {
-                    document.querySelectorAll(".calendar-grid div").forEach(d => d.classList.remove("selected"));
-                    day.classList.add("selected");
-                    dateInput.value = `${month} ${i}, ${year}`;
-                    calendar.classList.remove("active");
-                });
-
-                grid.appendChild(day);
-            }
-        }
-
-        generateCalendar(0, "calendar1", "month1");
-        generateCalendar(1, "calendar2", "month2");
-        /* -- */
-
-        /* guest list*/
-        const guestInput = document.getElementById("guestInput");
-        const guestDropdown = document.getElementById("guestDropdown");
-
-        guestInput.addEventListener("click", () => {
-            guestDropdown.classList.toggle("active");
-        });
-
-        document.addEventListener("click", (e) => {
-            if (!e.target.closest(".guest-field")) {
-                guestDropdown.classList.remove("active");
-            }
-        });
-
-        const counts = {
-            adults: 0,
-            children: 0,
-            infants: 0,
-            pets: 0
-        };
-
-        function updateGuestInput() {
-            const totalGuests = counts.adults + counts.children;
-
-            let text = "";
-
-            if (totalGuests > 0) text += `${totalGuests} guests`;
-            if (counts.infants > 0) text += `, ${counts.infants} infants`;
-            if (counts.pets > 0) text += `, ${counts.pets} pets`;
-
-            guestInput.value = text || "Add guests";
-        }
-
-        document.querySelectorAll(".plus").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const type = btn.dataset.type;
-                counts[type]++;
-                document.getElementById(type + "Count").innerText = counts[type];
-                updateGuestInput();
-            });
-        });
-
-        document.querySelectorAll(".minus").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const type = btn.dataset.type;
-
-                if (counts[type] > 0) {
-                    counts[type]--;
-                    document.getElementById(type + "Count").innerText = counts[type];
-                    updateGuestInput();
-                }
-            });
-        });
-        /*  */
-
-        /* SEARCH */
-        const searchFields = document.querySelectorAll(".search-item input");
-        const searchBtn = document.getElementById("searchBtn");
-
-        searchFields.forEach(field => {
-
-            field.addEventListener("focus", () => {
-                searchBtn.classList.add("active");
-            });
-
-        });
-
-        /* Reset when clicking outside */
-
-        document.addEventListener("click", (e) => {
-
-            if (!e.target.closest(".search-bar")) {
-                searchBtn.classList.remove("active");
-            }
-
-        });
-        /*  */
-
-        /* help */
-        const menuBtn = document.querySelector(".menu-btn");
-        const menuDropdown = document.getElementById("menuDropdown");
-
-        menuBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            menuDropdown.classList.toggle("active");
-        });
-
-        document.addEventListener("click", (e) => {
-            if (!e.target.closest(".menu-wrapper")) {
-                menuDropdown.classList.remove("active");
-            }
-        });
-        /* ---- */
-
-        document.querySelectorAll(".property-slider").forEach(sliderWrap => {
-
-            const slider = sliderWrap.querySelector(".tiles-out");
-            const nextBtn = sliderWrap.querySelector(".next");
-            const prevBtn = sliderWrap.querySelector(".prev");
-
-            const scrollAmount = 300;
-
-            function updateArrows() {
-
-                if (slider.scrollLeft <= 0) {
-                    prevBtn.classList.add("disabled");
-                } else {
-                    prevBtn.classList.remove("disabled");
-                }
-
-                if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5) {
-                    nextBtn.classList.add("disabled");
-                } else {
-                    nextBtn.classList.remove("disabled");
-                }
-
-            }
-
-            nextBtn.addEventListener("click", () => {
-                slider.scrollLeft += scrollAmount;
-            });
-
-            prevBtn.addEventListener("click", () => {
-                slider.scrollLeft -= scrollAmount;
-            });
-
-            slider.addEventListener("scroll", updateArrows);
-
-            updateArrows();
-
-        });
-
-        /* scroll header */
-
-
-        const header = document.querySelector(".ab-header");
-        let isScrolled = false;
-
-        window.addEventListener("scroll", () => {
-
-            if (window.scrollY > 80 && !isScrolled) {
-                header.classList.add("scrolled");
-                isScrolled = true;
-            }
-
-            if (window.scrollY < 60 && isScrolled) {
-                header.classList.remove("scrolled");
-                isScrolled = false;
-            }
-
-        });
-
-        /*  */
-
-        /* inspiration */
-         const inspiretabs = document.querySelectorAll(".tab");
-        const contents = document.querySelectorAll(".tab-content");
-
-        inspiretabs.forEach(tab => {
-
-            tab.addEventListener("click", () => {
-
-                const target = tab.dataset.tab;
-
-                inspiretabs.forEach(t => t.classList.remove("active"));
-                contents.forEach(c => c.classList.remove("active"));
-
-                tab.classList.add("active");
-                document.getElementById(target).classList.add("active");
-
-            });
-
-        });
-
-        /*  */
-    </script>
 </body>
 
 </html>

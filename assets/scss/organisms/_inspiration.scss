@@ -12,6 +12,13 @@
     gap: 25px;
     border-bottom: 1px solid #ddd;
     margin-bottom: 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .tab {
       background: none;
@@ -21,6 +28,8 @@
       cursor: pointer;
       color: #666;
       position: relative;
+      white-space: nowrap;
+      flex-shrink: 0;
 
       &.active {
         color: #000;
@@ -51,6 +60,21 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 30px 60px;
+
+    @include tablet-pro {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px 40px;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 30px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 20px;
+    }
   }
 
   .dest {
@@ -60,11 +84,19 @@
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 3px;
+
+      @include mobile {
+        font-size: 13px;
+      }
     }
 
     span {
       font-size: 13px;
       color: #717171;
+
+      @include mobile {
+        font-size: 12px;
+      }
     }
   }
 
@@ -73,7 +105,51 @@
     font-weight: 500;
     cursor: pointer;
   }
+
   .hidden-item {
     display: none;
+  }
+
+  @include tablet-pro {
+    padding: 50px 0;
+
+    .section-title {
+      font-size: 20px;
+    }
+
+    .inspiretabs {
+      gap: 20px;
+    }
+  }
+
+  @include mobile-tablet {
+    padding: 40px 0;
+
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .inspiretabs {
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  @include mobile {
+    padding: 30px 0;
+
+    .section-title {
+      font-size: 17px;
+    }
+
+    .inspiretabs {
+      gap: 14px;
+      margin-bottom: 20px;
+
+      .tab {
+        font-size: 13px;
+      }
+    }
   }
 }

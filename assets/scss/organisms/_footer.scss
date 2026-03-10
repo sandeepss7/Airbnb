@@ -68,6 +68,15 @@
         font-size: 16px;
         color: #222;
         text-decoration: none;
+        transition: 0.3s ease-in-out;
+        border-radius: 50%;
+        padding: 4px 6px;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #ddd;
+          scale: 1.1;
+        }
       }
     }
   }
