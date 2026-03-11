@@ -5,7 +5,8 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  will-change: transform, background;
 
   .nav-icon {
     width: 40px;
@@ -754,7 +755,7 @@
 
   /* ── SCROLLED STATE ── */
   &.scrolled {
-    padding: 10px 0;
+    
 
     .top-nav .nav-center {
       display: none;
