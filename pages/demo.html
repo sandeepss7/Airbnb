@@ -9,9 +9,104 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- styles -->
     <title>Document</title>
+
+    <style>
+      body{
+  font-family: Arial;
+  background:#f2f2f2;
+}
+
+.news-wrapper{
+  width:1000px;
+  margin:auto;
+}
+
+.news-row{
+  display:flex;
+  align-items:center;
+  margin:80px 0;
+}
+
+/* image */
+.news-img{
+  width:50%;
+}
+
+.news-img img{
+  width:100%;
+  border-radius:14px;
+}
+
+/* content card */
+.news-content{
+  width:50%;
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  transform:translateX(-120px);
+  position:relative;
+  z-index:2;
+}
+
+/* alternate layout */
+.news-row:nth-child(even){
+  flex-direction:row-reverse;
+}
+
+.news-row:nth-child(even) .news-content{
+  transform:translateX(120px);
+}
+
+.news-content h3{
+  margin-bottom:10px;
+}
+
+.news-content a{
+  color:#5b5b9c;
+  font-weight:600;
+  text-decoration:none;
+}
+    </style>
   </head>
   <body>
     <!-- body content start -->
+     <div class="news-wrapper">
+
+  <div class="news-row">
+    <div class="news-img">
+      <img src="https://picsum.photos/600/350?1">
+    </div>
+    <div class="news-content">
+      <h3>Teijin and Hilleman Laboratories Partnership</h3>
+      <p>Strategic partnership to promote CDMO services in cell and gene therapy.</p>
+      <a href="#">Read more →</a>
+    </div>
+  </div>
+
+  <div class="news-row">
+    <div class="news-img">
+      <img src="https://picsum.photos/600/350?2">
+    </div>
+    <div class="news-content">
+      <h3>Unique International Collaboration</h3>
+      <p>Breakthrough oral cholera vaccine brought to market.</p>
+      <a href="#">Read more →</a>
+    </div>
+  </div>
+
+  <div class="news-row">
+    <div class="news-img">
+      <img src="https://picsum.photos/600/350?3">
+    </div>
+    <div class="news-content">
+      <h3>Hilleman Laboratories Opens Facility</h3>
+      <p>New $20 million vaccine manufacturing facility in Singapore.</p>
+      <a href="#">Read more →</a>
+    </div>
+  </div>
+
+</div>
     <!-- body content end -->
 
     <!-- scripts -->
